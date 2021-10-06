@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+:root {
+  --pale-blue-2: hsl(225, 100%, 94%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(245, 75%, 65%);
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue-2);
+  display: flex;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+#container {
+  margin: auto;
+  width: 450px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.container-image {
+  height: 210px;
+  background-image: url(./images/illustration-hero.svg);
+}
+
+.container-body {
+  text-align: center;
+  padding: 2.8rem;
+  background-color: white;
+}
+.container-body > h1 {
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+.container-body p {
+  color: var(--desaturated-blue);
+  padding: 0 20px;
+}
+#para {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.container-price {
+  background-color: var(--very-pale-blue);
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+}
+.price > h4 {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.price > p {
+  color: var(--desaturated-blue);
+}
+.container-price > button {
+  margin-left: auto;
+  color: var(--bright-blue);
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.container-price > button:hover {
+  text-decoration: none;
+  color: var(--bright-blue-hover);
+}
+#payment-btn {
+  display: block;
+  width: 100%;
+  background: var(--bright-blue);
+  padding: 15px;
+  color: white;
+  margin: 25px auto;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 2px 25px var(--bright-blue-hover);
+  border-radius: 8px;
+}
+#payment-btn:hover {
+    color: var(--bright-blue-hover);
+}
+#cancel-btn{
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media  (max-width:500px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        background-size: cover;
+    }
+
+    #container{
+        width: 100vw;
+        max-width: 355px;
+    }
+    .container-body{
+        padding: 2rem;
+    }
+    .container-body h1{
+        font-size: 25px;
+    }
+    #para{
+        font-size: 15px;
+        /* padding: 0 15px; */
+        line-height: 1.6;
+    }
+}
