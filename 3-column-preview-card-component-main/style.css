@@ -84,11 +84,27 @@ p {
 .sedans {
   color: var(--bright-orange);
 }
+
 .suv {
   color: var(--dark-cyan);
 }
 .luxury {
   color: var(--very-dark-cyan);
+}
+.sedans:hover {
+  color: var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
+  background-color: var(--bright-orange);
+}
+.suv:hover {
+  color: var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
+  background-color: var(--dark-cyan);
+}
+.luxury:hover {
+  color: var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
+  background-color: var(--very-dark-cyan);
 }
 
 @media screen and (max-width: 600px) {
@@ -96,14 +112,11 @@ p {
     flex-direction: column;
     margin: 2rem 1rem;
   }
- 
+
   p {
     min-height: 100px;
   }
-  .small-container{
-      padding: 3rem;
+  .small-container {
+    padding: 3rem;
   }
-
- 
-  
 }
