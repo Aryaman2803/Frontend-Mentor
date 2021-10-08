@@ -6,3 +6,4 @@
 Challenge link - https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj
 
 
+Live link - https://frontend-mentor-order-summary.netlify.app/
