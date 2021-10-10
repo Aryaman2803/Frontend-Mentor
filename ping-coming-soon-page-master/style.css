@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --Pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --verydark-blue: hsl(209, 33%, 12%);
+}
+body {
+  /* min-height: 100vh; */
+  font-family: 'Libre Franklin', sans-serif;
+}
+.ping {
+  background-image: url(/ping-coming-soon-page-master/images/logo.svg);
+  height: 25px;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+h1 {
+  font-size: 38px;
+  color: var(--gray);
+  font-weight: 300;
+  text-align: center;
+}
+h1 > b {
+  font-weight: 700;
+  color: var(--verydark-blue);
+}
+h3 {
+  text-align: center;
+  font-weight: 300;
+  color: var(--verydark-blue);
+  margin: 1.5rem 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+form > input {
+  margin-right: 1rem;
+  width: 400px;
+  border-radius: 50px;
+  padding: 0 1.5rem;
+  border: 2px solid rgb(226, 226, 226);
+}
+button {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  border: none;
+  background-color: var(--blue);
+  font-weight: 700;
+}
+button:hover {
+  opacity: 0.8;
+}
+::placeholder {
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+}
+.slack {
+  display: block;
+  margin: 5rem auto;
+  background-image: url(/ping-coming-soon-page-master/images/illustration-dashboard.png);
+  max-width: 100%;
+  width: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.icons {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+}
+.icons img {
+  width: 30px;
+}
+.icons img:nth-child(2) {
+  margin:  1rem;
+}
+.icons img:hover{
+  width: 34px;
+}
+p{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+@media (max-width: 500px) {
+  .ping {
+    width: 80px;
+    background-size: contain;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  form input {
+    margin: 1rem 0;
+    height: 50px;
+    width: 75%;
+  }
+  form button {
+    width: 75%;
+  }
+  .slack {
+    width: 90%;
+  }
+}
