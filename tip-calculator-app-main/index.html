@@ -18,11 +18,11 @@
         <div class="dollar"><input type="input" class="amount" /></div>
         <h4>Select Tip %</h4>
         <div class="tip-percent">
-          <button class="tip-value">5%</button>
-          <button class="tip-value">10%</button>
-          <button class="tip-value">15%</button>
-          <button class="tip-value">25%</button>
-          <button class="tip-value">50%</button>
+          <button class="tip-value" id="five-percent">5%</button>
+          <button class="tip-value" id="ten-percent">10%</button>
+          <button class="tip-value" id="fifteen-percent">15%</button>
+          <button class="tip-value" id="twentyfive-percent">25%</button>
+          <button class="tip-value" id="fifty-percent">50%</button>
           <input
             type="text"
             class="tip-value"
@@ -49,17 +49,18 @@
             <h4>Tip Amount</h4>
             <span>/ person </span>
           </div>
-          <span id="tip-amt">$ 34</span>
+          <span id="tip-amt">$0.00</span>
         </div>
         <div class="right-tip-amount">
           <div class="right-tip">
             <h4>Total</h4>
             <span>/ person</span>
           </div>
-          <span id="total">$ 84</span>
+          <span id="total">$0.00</span>
         </div>
-        <button class="reset">Reset</button>
+        <button class="reset" id="reset" disabled>Reset</button>
       </div>
     </div>
   </body>
+  <script src="./app.js"></script>
 </html>

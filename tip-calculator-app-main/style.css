@@ -110,7 +110,7 @@ div + h4 {
   text-align: right;
   padding-right: 0.6rem;
 }
-.tip-value:last-child::placeholder{
+.tip-value:last-child::placeholder {
   text-align: center;
   font-size: 16px;
 }
@@ -121,7 +121,9 @@ div + h4 {
 }
 .tip-value:focus {
   outline: none !important;
-  border: 2px solid var(--strong-cyan);
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  /* border: 2px solid var(--strong-cyan); */
 }
 
 .people {
@@ -134,17 +136,13 @@ div + h4 {
   color: var(--dark-grayish-cyan2);
 }
 .zero-people {
-  /* display: none; */
   color: red;
   font-size: 9px;
   font-weight: 600;
+  margin-right: 40px;
 }
 .error {
-  /* display: none; */
-  color: red;
-  font-size: 9px;
-  margin-right: 40px;
-  font-weight: 600;
+  display: none;
 }
 /* .error-input:focus{
   outline: none !important;
@@ -209,7 +207,7 @@ div + h4 {
   color: var(--very-dark-cyan);
   text-transform: uppercase;
   font-weight: 700;
-  background-color: var(--strong-cyan);
+  background-color: hsl(183, 64%, 25%);
   border: 0;
   position: absolute;
   bottom: 30px;
@@ -218,7 +216,8 @@ div + h4 {
   width: 85%;
 }
 .reset:hover {
-  background-color: var(--light-grayish-cyan);
+  /* background-color: var(--light-grayish-cyan); */
+  background-color: hsl(184, 63%, 32%);
 }
 
 @media (max-width: 1100px) {
