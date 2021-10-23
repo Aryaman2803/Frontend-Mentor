@@ -87,6 +87,11 @@ nav {
   color: var(--white);
   font-weight: 700;
   background-color: var(--cyan-inside-call-to-action);
+  background-image: linear-gradient(
+    to right,
+    rgb(101, 226, 217),
+    rgb(51, 158, 204)
+  );
 }
 .features-grid {
   background-color: var(--dark-blue-main-background);
