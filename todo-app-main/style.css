@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+  --very-lightgray: hsl(0, 0%, 98%);
+  --very-lightgrayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* Dark */
+  --very-dark-blue-DARK: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue-DARK: hsl(235, 24%, 19%);
+  --light-grayish-blue-DARK: hsl(234, 39%, 85%);
+  --light-grayish-blue-DARK-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue-DARK: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-DARK: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-DARK2: hsl(237, 14%, 26%);
+}
+
+.light-theme {}
+
+.dark-theme {
+  --task-font-color:var(--light-grayish-blue-DARK);
+  --border-bottom: var(--very-dark-grayish-blue-DARK);
+  --font-color: var(--dark-grayish-blue-DARK);
+  --text-color: var(--very-lightgray);
+  --bg-color: var(--very-dark-blue-DARK);
+  --div-bg-color: var(--very-dark-desaturated-blue-DARK)
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--bg-color);
+  position: relative;
+}
+
+.main-wrapper {
+  background-image: url(./images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 240px;
+  width: 100%;
+  border: 1px solid black;
+  z-index: -10;
+}
+
+.todo-header {
+  margin: 0 auto;
+  width: 30%;
+  min-width: 300px;
+  max-width: 700px;
+  margin: 5rem auto 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: 26px;
+  letter-spacing: 10px;
+  z-index: 100;
+}
+
+.input-todo {
+  width: 40%;
+  min-width: 330px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--div-bg-color);
+}
+
+.input-todo button {
+  /* color: var(--text-color); */
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 1rem;
+  outline: none;
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.task-container {
+  background-color: var(--div-bg-color);
+  width: 40%;
+  min-width: 330px;
+  max-width: 800px;
+}
+
+#todo-input {
+  height: 45px;
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 1rem 0.5rem;
+  background-color: var(--div-bg-color);
+  color: var(--font-color);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.task-container {
+  background-color: var(--div-bg-color);
+  width: 40%;
+  min-width: 330px;
+  max-width: 800px;
+  margin: 1.2rem auto;
+  z-index: 10;
+  box-shadow: -12px 10px 30px 0px black;
+}
+
+.task {
+  min-width: 330px;
+  max-width: 800px;
+  margin: 0rem auto;
+  padding: 0.1rem 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-bottom);
+  color: var(--task-font-color);
+}
+
+.checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 1rem;
+  outline: none;
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+@media (max-width:600px) {
+  .main-wrapper {
+    background-position: 20% 100%;
+  }
+
+}
