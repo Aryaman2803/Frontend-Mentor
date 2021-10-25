@@ -7,13 +7,13 @@
   <title> Todo App</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
+<body class="light-theme">
   <!-- <img src="./images/bg-desktop-dark.jpg" alt="background image" class="bg-image"> -->
 
   <section class="main-wrapper">
     <div class="todo-header">
-      <h1>Todo</h1>
-      <input type="checkbox" />
+      <h1 id="h1">Todo</h1>
+      <button id="theme-switcher"><img src="./images/icon-sun.svg" alt="theme toggle button"> </button>
     </div>
   
     <!-- Add dynamic number items left -->
@@ -22,9 +22,24 @@
       <button></button>
       <input type="text" name="todo-input" id="todo-input" placeholder="Create a new todo...">
     </div>
-  
-    <div class="task-container">
-      <div class="task">
+  <div class="task-container">
+      <ul class="todo-list">
+        <li><div class="task completed">
+          <button class="checkbox"></button>
+          <p class="task-content">Hello koniciwa</p>
+        </div></li>
+        <li><div class="task completed">
+          <button class="checkbox"></button>
+          <p class="task-content">Hello koniciwa</p>
+        </div></li>
+        <li><div class="task completed">
+          <button class="checkbox"></button>
+          <p class="task-content">Hello koniciwa</p>
+        </div></li>
+      </ul>
+  </div>
+    <!-- <div class="task-container">
+      <div class="task completed">
         <button class="checkbox"></button>
         <p class="task-content">Hello koniciwa</p>
       </div>
@@ -36,7 +51,7 @@
         <button class="checkbox"></button>
         <p class="task-content">Hello koniciwa</p>
       </div>
-    </div>
+    </div> -->
   </section>
   <!-- All
   Active 
@@ -46,6 +61,6 @@
 
   
   Drag and drop to reorder list -->
-
+  <script src="./app.js"></script>
 </body>
 </html>

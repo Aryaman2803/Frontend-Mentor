@@ -8,13 +8,15 @@
 
 :root {
   /* Light */
-  --bright-blue: hsl(220, 98%, 61%);
-  --check-background: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
-  --very-lightgray: hsl(0, 0%, 98%);
-  --very-lightgrayish-blue: hsl(236, 33%, 92%);
-  --light-grayish-blue: hsl(233, 11%, 84%);
-  --dark-grayish-blue: hsl(236, 9%, 61%);
-  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --bright-blue-LIGHT: hsl(220, 98%, 61%);
+  --check-background-LIGHT: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+  --very-lightgray-LIGHT: hsl(0, 0%, 98%);
+  --very-lightgrayish-blue-LIGHT: hsl(236, 33%, 92%);
+  --light-grayish-blue-LIGHT: hsl(233, 11%, 84%);
+  --dark-grayish-blue-LIGHT: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue-LIGHT: hsl(235, 19%, 35%);
+  --bg-image-LIGHT: url(./images/bg-desktop-light.jpg);
+  --img-border-LIGHT: hsl(236, 33%, 92%);
 
   /* Dark */
   --very-dark-blue-DARK: hsl(235, 21%, 11%);
@@ -24,63 +26,94 @@
   --dark-grayish-blue-DARK: hsl(234, 11%, 52%);
   --very-dark-grayish-blue-DARK: hsl(233, 14%, 35%);
   --very-dark-grayish-blue-DARK2: hsl(237, 14%, 26%);
+  --bg-image-DARK: url(./images/bg-desktop-dark.jpg);
+  --img-border-DARK: black;
 }
 
-.light-theme {}
+.light-theme {
+  --task-font-color: var(--very-dark-grayish-blue-LIGHT);
+  --border-bottom: var(--light-grayish-blue-DARK);
+  --font-color: var(--dark-grayish-blue-DARK);
+  --text-color: var(--very-lightgrayish-blue-LIGHT);
+  --bg-color: var(--very-lightgray-LIGHT);
+  --div-bg-color: var(--very-lightgray-LIGHT);
+  --bg-image: var(--bg-image-LIGHT);
+  --bg-img-border: var(--img-border-LIGHT);
+}
 
 .dark-theme {
-  --task-font-color:var(--light-grayish-blue-DARK);
+  --task-font-color: var(--light-grayish-blue-DARK);
   --border-bottom: var(--very-dark-grayish-blue-DARK);
   --font-color: var(--dark-grayish-blue-DARK);
   --text-color: var(--very-lightgray);
   --bg-color: var(--very-dark-blue-DARK);
-  --div-bg-color: var(--very-dark-desaturated-blue-DARK)
+  --div-bg-color: var(--very-dark-desaturated-blue-DARK);
+  --bg-image: var(--bg-image-DARK);
+  --task-completed: var(--dark-grayish-blue-DARK);
+  --bg-img-border: var(--img-border-DARK);
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
   background: var(--bg-color);
   position: relative;
+  transition: all 0.24s linear;
+  height: 100vh;
 }
 
 .main-wrapper {
-  background-image: url(./images/bg-desktop-dark.jpg);
+  background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   height: 240px;
-  width: 100%;
-  border: 1px solid black;
+  min-height: 30vh;
+
   z-index: -10;
 }
 
 .todo-header {
   margin: 0 auto;
-  width: 30%;
+  width: 35%;
   min-width: 300px;
   max-width: 700px;
-  margin: 5rem auto 2rem auto;
+  margin: 0rem auto 2rem auto;
   display: flex;
+  padding-top: 6rem;
   justify-content: space-between;
   text-transform: uppercase;
-  align-items: center;
   font-size: 26px;
   letter-spacing: 10px;
   z-index: 100;
 }
 
+#theme-switcher {
+  width: 20px;
+  height: 2px;
+  background-color: initial;
+  border: none;
+  cursor: pointer;
+}
+
+#h1 {
+  color: whitesmoke;
+}
+
 .input-todo {
   width: 40%;
   min-width: 330px;
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
+  padding: 0.5rem 0;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   background-color: var(--div-bg-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
 }
 
 .input-todo button {
-  /* color: var(--text-color); */
   width: 25px;
   height: 25px;
   border-radius: 50px;
@@ -96,6 +129,7 @@ body {
   width: 40%;
   min-width: 330px;
   max-width: 800px;
+  border-radius: 5px;
 }
 
 #todo-input {
@@ -112,25 +146,28 @@ body {
 
 .task-container {
   background-color: var(--div-bg-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   width: 40%;
   min-width: 330px;
-  max-width: 800px;
+  max-width: 650px;
   margin: 1.2rem auto;
   z-index: 10;
-  box-shadow: -12px 10px 30px 0px black;
 }
-
+.todo-list{
+  list-style-type: none;
+}
 .task {
   min-width: 330px;
   max-width: 800px;
   margin: 0rem auto;
-  padding: 0.1rem 0;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   border-bottom: 1px solid;
   font-size: 14px;
   border-bottom: 1px solid var(--border-bottom);
   color: var(--task-font-color);
+  cursor: pointer;
 }
 
 .checkbox {
@@ -142,6 +179,12 @@ body {
   margin: 0.5rem 1rem;
   outline: none;
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.completed {
+  text-decoration: line-through;
+  /* color: var(--task-completed); */
+  opacity: 0.5;
 }
 
 @media (max-width:600px) {

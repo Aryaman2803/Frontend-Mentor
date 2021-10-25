@@ -1,5 +1,4 @@
-const themeSwitch = document.querySelector('input')
-themeSwitch.addEventListener('click',()=>{
-    document.body.classList.toggle('light-theme')
-    console.log('ere');
+const themeSwitch = document.querySelector('#theme-switcher').addEventListener('click',()=>{
+    document.body.classList.toggle('dark-theme')
+    console.log('er');
 })
