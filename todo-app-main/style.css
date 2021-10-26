@@ -66,7 +66,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  height: 240px;
+  height: 300px;
   min-height: 30vh;
 
   z-index: -10;
@@ -79,7 +79,7 @@ body {
   max-width: 700px;
   margin: 0rem auto 2rem auto;
   display: flex;
-  padding-top: 6rem;
+  padding-top: 5rem;
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 26px;
@@ -124,14 +124,6 @@ body {
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
-.task-container {
-  background-color: var(--div-bg-color);
-  width: 40%;
-  min-width: 330px;
-  max-width: 800px;
-  border-radius: 5px;
-}
-
 #todo-input {
   height: 45px;
   width: 80%;
@@ -144,18 +136,29 @@ body {
   letter-spacing: 1px;
 }
 
+.empty-alert {
+  padding-top: 1rem;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
 .task-container {
   background-color: var(--div-bg-color);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   width: 40%;
   min-width: 330px;
   max-width: 650px;
-  margin: 1.2rem auto;
+  border-radius: 5px;
+  margin: 1rem auto;
   z-index: 10;
+  padding-top: 2px;
 }
-.todo-list{
+
+.todo-list {
   list-style-type: none;
 }
+
 .task {
   min-width: 330px;
   max-width: 800px;
@@ -168,6 +171,35 @@ body {
   border-bottom: 1px solid var(--border-bottom);
   color: var(--task-font-color);
   cursor: pointer;
+  position: relative;
+}
+
+.task:hover {
+  opacity: 0.8;
+}
+
+.task:hover .delete-cross {
+  visibility: visible;
+}
+
+.delete-cross {
+  width: 13x;
+  height: 13px;
+  position: absolute;
+  right: 20px;
+  visibility: hidden;
+}
+
+.incomplete {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 1rem;
+  outline: none;
+  background-color: inherit;
+  border: 1px solid var(--border-bottom);
 }
 
 .checkbox {
@@ -178,7 +210,14 @@ body {
   cursor: pointer;
   margin: 0.5rem 1rem;
   outline: none;
+  /* background-image: url(./images/icon-check.svg ); */
+  /* background-repeat: no-repeat; */
+  transition: 50ms ease-in-out;
+}
+
+.checkbox-bg {
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
 }
 
 .completed {
