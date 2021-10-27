@@ -37,11 +37,7 @@ function addToDo(e) {
 
     const liDivBtn = document.createElement('button')
     liDivBtn.classList.add('incomplete')
-
-    // if (getTheme.classList.contains('light-theme')) {
-    //     liDivBtn.innerHTML = '<img src="./images/icon-check.svg" alt="">'
-    // }
-    // liDivBtn.innerHTML = '<img src="./images/icon-check.svg" alt="">'
+    
     const liDivP = document.createElement('p')
     liDivP.classList.add('task-content')
 
